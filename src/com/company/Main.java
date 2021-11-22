@@ -12,6 +12,15 @@ public class Main {
         System.out.println("Boss health: " + roshan.getBossHealth() + " " + "Damage: " + roshan.getBossDamage() + " " +
                 "Deffense: " + roshan.getBossDeffense());
         createHeroes();
+        for (int i = 0; i < createHeroes().length; i++) {
+            System.out.println("legionCommander stat: " + "Health: " + createHeroes()[0].getHealth() + " " + "Damage: " + createHeroes()[0].getDamage()
+                    + " " + "aby: " + createHeroes()[0].getAby());
+            System.out.println("dazzle stat: " + "Health: " + createHeroes()[1].getHealth() + " " + "Damage: " + createHeroes()[1].getDamage());
+            System.out.println("invoker stat: " + "Health: " + createHeroes()[2].getHealth() + " " + "Damage: " + createHeroes()[2].getDamage()
+                    + " " + "aby: " + createHeroes()[2].getAby());
+            break;
+        }
+
     }
 
     public static Hero[] createHeroes(){
@@ -19,15 +28,8 @@ public class Main {
             Hero dazzle = new Hero(300,20);
             Hero invoker = new Hero(600,30,"invoke");
             Hero[] heroes  = {legionCommander,dazzle,invoker};
-        for (int i = 0; i < heroes.length; i++) {
-            System.out.println("legionCommander stat: " + "Health: " + heroes[0].getHealth() + " " + "Damage: " + heroes[0].getDamage()
-            + " " + "aby: " + heroes[0].getAby());
-            System.out.println("dazzle stat: " + "Health: " + heroes[1].getHealth() + " " + "Damage: " + heroes[1].getDamage());
-            System.out.println("invoker stat: " + "Health: " + heroes[2].getHealth() + " " + "Damage: " + heroes[2].getDamage()
-                    + " " + "aby: " + heroes[2].getAby());
-            break;
-        }
-        return heroes;
+            return heroes;
+
     }
 }
 
